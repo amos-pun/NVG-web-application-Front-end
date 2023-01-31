@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NVG-web-application/static/css/main.15309bbf.css",
+    "main.js": "/NVG-web-application/static/js/main.fb66a20a.js",
+    "index.html": "/NVG-web-application/index.html",
+    "main.15309bbf.css.map": "/NVG-web-application/static/css/main.15309bbf.css.map",
+    "main.fb66a20a.js.map": "/NVG-web-application/static/js/main.fb66a20a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15309bbf.css",
+    "static/js/main.fb66a20a.js"
+  ]
+}

@@ -1,0 +1,2 @@
+.heading{color:#1b5e20;position:relative;text-transform:uppercase}.heading:before{animation:slide 6s linear infinite;-webkit-animation:slide 6s linear infinite;border-right:5px solid #1b5e20;color:#ff6f00;content:"New_Vision_Group";left:0;overflow:hidden;position:absolute;top:0;width:100%}@-webkit-keyframes slide{0%{width:0}50%{width:100%}to{width:0}}@keyframes slide{0%{width:0}50%{width:100%}to{width:0}}.bi-person-bounding-box{font-size:4rem}
+/*# sourceMappingURL=main.15309bbf.css.map*/
