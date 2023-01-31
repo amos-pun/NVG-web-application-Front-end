@@ -1,0 +1,34 @@
+.heading{
+    color: #1B5E20;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .heading::before{
+    content: "New_Vision_Group";
+    width: 100%;
+    color: #FF6F00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 5px solid #1B5E20  ;
+    animation: slide 6s linear infinite;
+    -webkit-animation: slide 6s linear infinite;
+    overflow: hidden;
+  }
+  
+  @keyframes slide {
+    0%{
+      width: 0%;
+    }
+    50%{
+      width: 100%;
+    }
+    100%{
+      width: 0%;
+    }
+  }
+
+  .bi-person-bounding-box{
+    font-size: 4rem;
+  }
