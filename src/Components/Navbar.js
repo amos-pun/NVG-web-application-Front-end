@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from '../images/icon.jpeg'
 import './Heading.css'
 
 const Navbar = () => {
   return (
     <div className='col-lg-12 d-flex'>
         <div className='col-lg-3 justify-content-evenly d-flex align-middle'>
-            <img src='./images/icon.jpeg' alt='img..' height={"100px"}/>
+            <img src={logo} alt='img..' height={'90px'}/>
         </div>
 
         <div className='col-lg-6 justify-content-evenly d-flex align-items-center'>

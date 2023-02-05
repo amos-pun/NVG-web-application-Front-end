@@ -1,0 +1,62 @@
+.dur{
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    width: 27%;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgb(41, 42, 72);
+}
+.dur::before{
+    content: "Dursikshya";
+    width: 100%;
+    color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 3px solid navy;
+    animation: slide 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes slide {
+    0%{
+      width: 0%;
+    }
+    50%{
+      width: 100%;
+    }
+    100%{
+      width: 0%;
+    }
+  }
+.input-group{
+    margin: 8px 0px !important;
+}
+.info_text{
+    font-weight: bold;
+    color: orange;
+    /* text-shadow: 1px 0px 3px black, 0px 2px 4px navy; */
+    font-size:1.3rem;
+    border: none;
+    width: 208px;
+    background: transparent;
+}
+
+.input_text{
+    border: 1px solid black;
+    border-radius: 8px !important;
+    background-color: rgb(244, 248, 251);
+    font-family: 'Itim', cursive;
+}
+.male{
+    margin: 5px !important;
+}
+.radio{
+    margin-top: 10px !important;
+    margin-right: 10px !important;
+}
+.radio_btn{
+    display: flex;
+    width: 375px;
+    flex-direction: row;
+    justify-content: space-around;
+}

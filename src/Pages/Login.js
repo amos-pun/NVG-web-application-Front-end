@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 
 const Login = () => {
@@ -37,9 +38,14 @@ const Login = () => {
                 <input type="checkbox" value="remember-me" /> Remember me
               </label>
             </div>
-            <button className="w-100 btn btn-lg btn-primary" type="submit">
+
+            <div className="grid">
+              <button className="w-100 btn btn btn-primary left" type="submit">
               Sign in
-            </button>
+              </button>
+              <Link to={'/register'} className='right btn btn-primary'>Sign Up</Link>
+            </div>
+            
             <p className="mt-5 mb-3 text-muted text-center">&copy; NVG</p>
           </form>
         </main>

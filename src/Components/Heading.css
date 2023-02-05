@@ -32,3 +32,29 @@
   .bi-person-bounding-box{
     font-size: 4rem;
   }
+
+  .grid{
+    display: grid;
+    grid-template-columns: auto 100px;
+    transition: 300ms;
+  }
+
+  .grid:has(.right:hover){
+    grid-template-columns: auto 70%;
+  }
+  .left:hover{
+    background-color: transparent;
+    border: 2px solid green;
+    color: black;
+  }
+  .right:hover{
+    background-color: transparent;
+    border: 2px solid green;
+    color: black;
+  }
+  .left{
+    font-family: 'Anton', sans-serif;
+  }
+  .right{
+    font-family: 'Anton', sans-serif;
+  }
