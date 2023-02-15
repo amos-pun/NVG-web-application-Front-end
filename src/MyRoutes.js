@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
@@ -7,7 +7,7 @@ import SignUp from './Pages/SignUp'
 const MyRoutes = () => {
   return (
     <div>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
 
                 <Route path="/home" element={<Home/>}/>
@@ -15,7 +15,7 @@ const MyRoutes = () => {
                 <Route path="/register" element={<SignUp/>}/>
 
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </div>
   )
 }
