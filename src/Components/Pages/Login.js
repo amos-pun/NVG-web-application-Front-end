@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Layouts/Navbar";
 
 const Login = () => {
   return (
@@ -10,7 +10,7 @@ const Login = () => {
         <main className="form-signin w-25 m-auto mt-5">
           <form>
           <div className="text-center">
-            <i class="bi bi-person-bounding-box fa-5x"></i>
+            <i className="bi bi-person-bounding-box fa-5x"></i>
           </div>
             <h1 className="h3 mb-3 fw-normal text-center">Login to Admin Page</h1>
 
@@ -21,7 +21,7 @@ const Login = () => {
                 id="floatingInput"
                 placeholder="name@example.com"
               />
-              <label for="floatingInput">Email address</label>
+              <label htmlFor="floatingInput">Email address</label>
             </div>
             <div className="form-floating m-1">
               <input
@@ -30,7 +30,7 @@ const Login = () => {
                 id="floatingPassword"
                 placeholder="Password"
               />
-              <label for="floatingPassword">Password</label>
+              <label htmlFor="floatingPassword">Password</label>
             </div>
 
             <div className="checkbox mb-3 text-center mt-2">
@@ -43,7 +43,7 @@ const Login = () => {
               <button className="w-100 btn btn btn-primary left" type="submit">
               Sign in
               </button>
-              <Link to={'/register'} className='right btn btn-primary'>Sign Up</Link>
+              <Link to='/signup' className='right btn btn-primary'>Sign Up</Link>
             </div>
             
             <p className="mt-5 mb-3 text-muted text-center">&copy; NVG</p>

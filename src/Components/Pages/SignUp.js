@@ -1,12 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+import { signUpToRegister } from "../../api/HoldersApi";
+import Navbar from "../Layouts/Navbar";
 import "./SignUp.css";
 
 const SignUp = () => {
+
+  let [ holdersName, setHoldersName ] = useState('')
+  let [ password, setPassword ] = useState('')
+  let [ email, setEmail ] = useState('')
+  let [ error, setError ] = useState('')
+  let [ success, setSuccess ] = useState(false)
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    signUpToRegister(holdersName, password, email)
+    .then(data=>{
+      if(data.error){
+        setError(data.error)
+        setSuccess(false)
+    }
+      else{
+        setSuccess(true)
+        setError('')
+    }
+  })
+  }
+
+  const showError = () => {
+    if(error){
+      return <div className="alert alert-on">{error}</div>
+    }
+  }
+
+  
+  const showSuccess = () => {
+    if(error){
+      return <div className="alert alert-on">{success}</div>
+    }
+  }
+  
   return (
     <div>
     <Navbar />
+    {showError()}
+    {showSuccess()}
       <main className="form-signin w-50 mt-3 main  border px-5 py-3 m-auto">
         <form>
         <Link to='/' className="btn btn-primary color-white">Back</Link>
@@ -14,11 +52,13 @@ const SignUp = () => {
           <div className="input-group has-validation">
             <span className="input-group-text info_text">Full Name</span>
             <input
+              autoFocus
               type="text"
               className="form-control input_text mx-1"
               id="username"
               placeholder="Amos Pun"
               required
+              onChange={(e)=>{setHoldersName(e.target.value)}}
             />
           </div>
 
@@ -30,6 +70,7 @@ const SignUp = () => {
               id="username"
               placeholder="jane@gmail.com"
               required
+              onChange={(e)=>{setPassword(e.target.value)}}
             />
           </div>
 
@@ -41,6 +82,7 @@ const SignUp = () => {
               id="username"
               placeholder="*****"
               required
+              onChange={e=>{setEmail(e.target.value)}}
             />
           </div>
 
@@ -51,7 +93,6 @@ const SignUp = () => {
               className="form-control input_text mx-1"
               id="username"
               placeholder="*****"
-              required
             />
           </div>
 
@@ -64,10 +105,8 @@ const SignUp = () => {
                             name="paymentMethod"
                             type="radio"
                             className="form-check-input radio border border-primary"
-                            checked
-                            required
                         />
-                        <label className="form-check-label male" for="credit">
+                        <label className="form-check-label male" htmlFor="credit">
                             Male
                         </label>
                     </div>
@@ -77,9 +116,8 @@ const SignUp = () => {
                         name="paymentMethod"
                         type="radio"
                         className="form-check-input radio border border-primary"
-                        required
                     />
-                    <label className="form-check-label male" for="debit">
+                    <label className="form-check-label male" htmlFor="debit">
                         Female
                     </label>
                     </div>
@@ -87,7 +125,9 @@ const SignUp = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/signup" className="register btn btn-warning w-50">
+            <Link to="/signup" className="register btn btn-warning w-50"
+              onClick={handleSubmit}
+            >
               Register
             </Link>
           </div>

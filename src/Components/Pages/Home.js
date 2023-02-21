@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from '../Components/Navbar'
-import SearchBox from '../Components/SearchBox'
-import { robots } from './StakeHolder'
+import Navbar from '../Layouts/Navbar'
+import SearchBox from '../Layouts/SearchBox'
 import StakeHolderCardList from './StakeHolderCardList'
 
 

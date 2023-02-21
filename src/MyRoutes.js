@@ -1,22 +1,25 @@
 import React from 'react'
 import { Routes, Route, HashRouter } from 'react-router-dom'
-import Home from './Pages/Home'
-import Login from './Pages/Login'
-import SignUp from './Pages/SignUp'
+import EmailConfirmation from './Components/Pages/EmailConfirmation'
+import Home from './Components/Pages/Home'
+import Login from './Components/Pages/Login'
+import SignUp from './Components/Pages/SignUp'
 
 const MyRoutes = () => {
   return (
-    <div>
+    <React.StrictMode>
         <HashRouter>
             <Routes>
 
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/" element={<Login/>}/>
-                <Route path="/register" element={<SignUp/>}/>
+
+                <Route path="/signup" element={<SignUp/>}/>
+                <Route path='/verifyEmail/:token' element={<EmailConfirmation/>}/>
 
             </Routes>
         </HashRouter>
-    </div>
+    </React.StrictMode>
   )
 }
 
