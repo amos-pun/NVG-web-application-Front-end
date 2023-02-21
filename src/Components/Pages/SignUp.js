@@ -14,7 +14,7 @@ const SignUp = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    signUpToRegister(holdersName, password, email)
+    signUpToRegister(holdersName, email, password)
     .then(data=>{
       if(data.error){
         setError(data.error)
@@ -35,8 +35,8 @@ const SignUp = () => {
 
   
   const showSuccess = () => {
-    if(error){
-      return <div className="alert alert-on">{success}</div>
+    if(success){
+      return <div className="alert alert-on">Verifiaction Email has been sent.</div>
     }
   }
   
@@ -67,10 +67,10 @@ const SignUp = () => {
             <input
               type="text"
               className="form-control input_text mx-1"
-              id="username"
+              id="email"
               placeholder="jane@gmail.com"
               required
-              onChange={(e)=>{setPassword(e.target.value)}}
+              onChange={(e)=>{setEmail(e.target.value)}}
             />
           </div>
 
@@ -79,20 +79,10 @@ const SignUp = () => {
             <input
               type="text"
               className="form-control input_text mx-1"
-              id="username"
+              id="password"
               placeholder="*****"
               required
-              onChange={e=>{setEmail(e.target.value)}}
-            />
-          </div>
-
-          <div className="input-group has-validation">
-            <span className="input-group-text info_text">Confirm Password</span>
-            <input
-              type="text"
-              className="form-control input_text mx-1"
-              id="username"
-              placeholder="*****"
+              onChange={(e)=>{setPassword(e.target.value)}}
             />
           </div>
 
@@ -125,7 +115,9 @@ const SignUp = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/signup" className="register btn btn-warning w-50"
+            <Link to="/signup" 
+            className="register btn btn-warning w-50"
+            type="submit"
               onClick={handleSubmit}
             >
               Register

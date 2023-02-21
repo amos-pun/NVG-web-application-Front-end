@@ -12,7 +12,6 @@ const Navbar = () => {
         <div className='col-lg-6 justify-content-evenly d-flex align-items-center'>
         <div className="center_div text-center">
           <p className="m-2 text-center heading">New_Vision_Group</p>
-          <h5>Admin Page</h5>
         </div>
         </div>
 

@@ -1,8 +1,8 @@
 import { API } from "../config"
 
 // to register user
-export const signUpToRegister = ( holdersName, password, email) => {
-    let user = {holdersName, password, email }
+export const signUpToRegister = ( fullName, email, password) => {
+    let user = {password, fullName, email }
     return fetch(`${API}/signup`,{
         method : "POST",
         headers : {
@@ -11,7 +11,7 @@ export const signUpToRegister = ( holdersName, password, email) => {
         body: JSON.stringify(user)
     })
     .then(res => res.json())
-    .catch( err => console.log(err))
+    .catch(err => console.log(err))
 }
 
 // to verify email through email confirmation
